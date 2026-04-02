@@ -1,0 +1,189 @@
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import ScrollAnimationWrapper from "@/components/ScrollAnimationWrapper";
+import { Home, Heart, Activity, Baby, Syringe, Stethoscope, CheckCircle2 } from "lucide-react";
+import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
+
+const HomeHealth = () => {
+  const { t, lang } = useLanguage();
+  const isAr = lang === "ar";
+
+  const rehabServices = isAr ? [
+    "صحة المرأة والعافية والتعافي",
+    "إعادة التأهيل القلبي",
+    "إعادة تأهيل السكتة الدماغية",
+    "إدارة آلام الظهر",
+    "مشاكل العضلات والعظام والحركة",
+    "تدريب القوة وتحسين الحركة",
+    "التدليك العلاجي",
+    "إعادة تأهيل الأطفال",
+  ] : [
+    "Women's health, wellness, and recovery",
+    "Cardiac rehabilitation",
+    "Stroke rehabilitation",
+    "Back pain management",
+    "Musculoskeletal and mobility issues",
+    "Strength training and mobility optimization",
+    "Therapeutic massage",
+    "Pediatric rehabilitation",
+  ];
+
+  const shortTermServices = isAr ? [
+    "الحقن والرعاية المتعلقة بأطفال الأنابيب",
+    "العلاج الوريدي (تعويض السوائل، المضادات الحيوية)",
+    "العناية بالجروح وتغيير الضمادات",
+    "فحص المصارف وسحب الدم",
+    "رعاية ما بعد الولادة",
+    "إدارة الألم والرعاية التلطيفية",
+    "القسطرة البولية",
+    "تخطيط القلب الكهربائي (ECG)",
+    "تخطيط القلب للجنين (CTG)",
+    "التغذية المعوية والوريدية",
+    "رعاية الفغر",
+    "البخاخات",
+    "مراقبة سكر الدم والعلامات الحيوية",
+  ] : [
+    "Injections and IVF-related care",
+    "IV therapy (fluid replacement, antibiotics)",
+    "Wound care and dressing changes",
+    "Drain checks and blood draws",
+    "Post-natal care",
+    "Pain management and palliative care",
+    "Urinary catheterization",
+    "Electrocardiography (ECG)",
+    "Cardiotocography (CTG)",
+    "Enteral and parenteral feeding",
+    "Ostomy care",
+    "Nebulization",
+    "Blood sugar and vital signs monitoring",
+  ];
+
+  const longTermServices = isAr ? [
+    "رعاية الأطفال ومراقبة حديثي الولادة",
+    "رعاية كبار السن (المسنين)",
+  ] : [
+    "Baby care and newborn monitoring",
+    "Senior (geriatric) care",
+  ];
+
+  return (
+    <div className="min-h-screen bg-background pt-[var(--header-height,56px)]">
+      <Header />
+
+      {/* Hero */}
+      <section className="py-16 md:py-20 bg-primary/5">
+        <div className="container mx-auto px-6 text-center">
+          <ScrollAnimationWrapper>
+            <div className="w-16 h-16 rounded-full bg-accent/15 flex items-center justify-center mx-auto mb-5">
+              <Home className="w-8 h-8 text-accent" />
+            </div>
+            <p className="text-accent text-xs tracking-[0.3em] uppercase font-body mb-3">{t("careAtHome")}</p>
+            <h1 className="text-4xl md:text-5xl font-serif text-foreground mb-4">{t("royaleHomeHealth")}</h1>
+          </ScrollAnimationWrapper>
+        </div>
+      </section>
+
+      {/* About Us */}
+      <section className="py-16">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <ScrollAnimationWrapper>
+            <h2 className="text-2xl md:text-3xl font-serif text-foreground mb-4">{isAr ? "عن الرعاية المنزلية" : "About Us"}</h2>
+            <p className="font-body text-sm text-muted-foreground leading-relaxed">
+              {isAr
+                ? "رويال للرعاية المنزلية هي امتداد حصري لمستشفى رويال حياة، تقدم دعماً استثنائياً للصحة والعافية مباشرة في منزلك. تمزج خدماتنا بين الرعاية الطبية عالية الجودة والفخامة والضيافة المميزة التي يُعرف بها مستشفى رويال حياة. مدعومين بفريق متعدد التخصصات من المتخصصين في الرعاية الصحية، نقدم رعاية شخصية ورحيمة ومتخصصة تتوافق مع أعلى المعايير الدولية."
+                : "Royale Home Health is an exclusive extension of Royale Hayat Hospital, offering exceptional health and wellness support delivered directly to your home. Our services blend high-quality medical care with the signature luxury and hospitality that Royale Hayat is known for. Backed by a multi-disciplinary team of healthcare professionals, we provide personalized, compassionate, and expert care aligned with the highest international standards."}
+            </p>
+          </ScrollAnimationWrapper>
+        </div>
+      </section>
+
+      {/* Rehabilitation Services */}
+      <section className="py-16 bg-primary/5">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <ScrollAnimationWrapper>
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-12 h-12 rounded-full bg-accent/15 flex items-center justify-center">
+                <Activity className="w-6 h-6 text-accent" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-serif text-foreground">{isAr ? "خدمات إعادة التأهيل" : "Rehabilitation Services"}</h2>
+            </div>
+            <p className="font-body text-sm text-muted-foreground leading-relaxed mb-6 ml-15">
+              {isAr
+                ? "برامج إعادة التأهيل المنزلية لدينا مصممة لاستعادة الصحة وتحسين الحركة وتعزيز جودة الحياة عبر مجموعة من الحالات:"
+                : "Our home-based rehabilitation programs are designed to restore health, enhance mobility, and improve quality of life across a range of conditions:"}
+            </p>
+          </ScrollAnimationWrapper>
+          <div className="grid gap-3 max-w-3xl mx-auto">
+            {rehabServices.map((item, i) => (
+              <motion.div key={i} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
+                className="flex items-center gap-3 bg-popover border border-border/50 rounded-xl px-5 py-3.5">
+                <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
+                <span className="font-body text-sm text-foreground">{item}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Specialized Nursing Services */}
+      <section className="py-16">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <ScrollAnimationWrapper>
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <Stethoscope className="w-6 h-6 text-primary" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-serif text-foreground">{isAr ? "خدمات التمريض المتخصصة" : "Specialized Nursing Services"}</h2>
+            </div>
+            <p className="font-body text-sm text-muted-foreground leading-relaxed mb-8 ml-15">
+              {isAr
+                ? "يقدم فريق التمريض المتخصص لدينا خدمات طبية شاملة في راحة منزلك، تشمل:"
+                : "Our specialized nursing team offers comprehensive medical services in the comfort of your home, including:"}
+            </p>
+          </ScrollAnimationWrapper>
+
+          {/* Short-Term Visits */}
+          <div className="mb-10">
+            <div className="flex items-center gap-2 mb-4">
+              <Syringe className="w-5 h-5 text-primary" />
+              <h3 className="font-serif text-lg text-foreground">{isAr ? "زيارات قصيرة المدى" : "Short-Term Visits"}</h3>
+            </div>
+            <div className="grid gap-3 max-w-3xl mx-auto">
+              {shortTermServices.map((item, i) => (
+                <motion.div key={i} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.04 }}
+                  className="flex items-center gap-3 bg-popover border border-border/50 rounded-xl px-5 py-3.5">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span className="font-body text-sm text-foreground">{item}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Long-Term Visits */}
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <Heart className="w-5 h-5 text-accent" />
+              <h3 className="font-serif text-lg text-foreground">{isAr ? "زيارات طويلة المدى (رعاية على مدار الساعة)" : "Long-Term Visits (24/7 Care)"}</h3>
+            </div>
+            <div className="grid gap-3 max-w-3xl mx-auto">
+              {longTermServices.map((item, i) => (
+                <motion.div key={i} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
+                  className="flex items-center gap-3 bg-popover border border-border/50 rounded-xl px-5 py-3.5">
+                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
+                  <span className="font-body text-sm text-foreground">{item}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+      <ScrollToTop />
+    </div>
+  );
+};
+
+export default HomeHealth;

@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Garamond';
+  src: url('/fonts/Garamond.ttc') format('truetype-collection');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --header-height: 56px;
+    --background: 25 32% 93%;
+    --foreground: 337 57% 32%;
+
+    --card: 25 32% 93%;
+    --card-foreground: 337 57% 32%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 337 57% 32%;
+
+    --primary: 337 57% 32%;
+    --primary-foreground: 25 32% 93%;
+
+    --secondary: 359 30% 58%;
+    --secondary-foreground: 337 57% 32%;
+
+    --muted: 41 16% 73%;
+    --muted-foreground: 337 30% 38%;
+
+    --accent: 43 45% 58%;
+    --accent-foreground: 25 32% 93%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 41 16% 76%;
+    --input: 41 16% 76%;
+    --ring: 337 57% 32%;
+
+    --radius: 0.75rem;
+
+    /* Brand colors */
+    --burgundy: 337 57% 32%;
+    --rose: 359 30% 58%;
+    --gold-olive: 43 45% 58%;
+    --warm-stone: 41 16% 73%;
+    --soft-ivory: 25 32% 93%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    color: hsl(var(--gold-olive));
+  }
+  .bg-burgundy {
+    background-color: hsl(var(--burgundy));
+  }
+  .bg-rose {
+    background-color: hsl(var(--rose));
+  }
+  .bg-warm-stone {
+    background-color: hsl(var(--warm-stone));
+  }
+  .bg-soft-ivory {
+    background-color: hsl(var(--soft-ivory));
+  }
+  .text-burgundy {
+    color: hsl(var(--burgundy));
+  }
+  .text-rose {
+    color: hsl(var(--rose));
+  }
+  .text-soft-ivory {
+    color: hsl(var(--soft-ivory));
+  }
+  .border-gold {
+    border-color: hsl(var(--gold-olive));
+  }
+  .border-warm-stone {
+    border-color: hsl(var(--warm-stone));
+  }
+}
+
+/* Premium micro-interactions */
+@layer components {
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(127, 35, 70, 0.12);
+  }
+}
+
+/* Insurance marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-rtl {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+  width: max-content;
+}
+
+[dir="rtl"] .animate-marquee {
+  animation: marquee-rtl 30s linear infinite;
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes marquee-reverse-rtl {
+  0% { transform: translateX(50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 30s linear infinite;
+  width: max-content;
+}
+
+[dir="rtl"] .animate-marquee-reverse {
+  animation: marquee-reverse-rtl 30s linear infinite;
+}
+
+/* Feedback marquee */
+@keyframes feedbackMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Arabic text scaling for readability */
+[dir="rtl"] {
+  font-size: 1.05em;
+  letter-spacing: 0.01em;
+  line-height: 1.75;
+}
+
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4 {
+  font-size-adjust: 0.52;
+  letter-spacing: 0.02em;
+}
+
+[dir="rtl"] p, [dir="rtl"] span, [dir="rtl"] a, [dir="rtl"] li, [dir="rtl"] label, [dir="rtl"] button {
+  font-size: inherit;
+  line-height: 1.8;
+}
+
+[dir="rtl"] .text-xs {
+  font-size: 0.8rem;
+}
+
+[dir="rtl"] .text-sm {
+  font-size: 0.925rem;
+}
+
+/* Prevent RTL from flipping directional icons */
+[dir="rtl"] .ltr-icon {
+  direction: ltr;
+}
+
+/* Feedback marquee - continuous loop */
+@keyframes feedbackMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes feedbackMarqueeRtl {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}

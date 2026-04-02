@@ -1,0 +1,103 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: RHH_Insurance_Lightbox poster.ai
+Color Mode: CMYK color
+Color Profile: U.S. Web Coated (SWOP) v2
+Ruler Units: centimeters
+Artboard Dimensions: 62 cm x 117 cm
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+PANTONE 216 C (Lab)
+PANTONE 871 C (Lab)
+
+-----------------------------------------------------------------------------
+Missing Fonts:NONE
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:NONE
+
+-----------------------------------------------------------------------------
+Fonts:
+Avenir Black (TrueType)
+GE Dinar One Medium (OTF)
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Missing Links:
+NONE
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+/Users/shebli/Desktop/JOBZ/RHH/PHYSICAL BRANDING/Posters/Lightbox Poster/RHH_Insurance_Lightbox poster/Links/Saico.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 6477K, 1023 by 1621 pixels
+Dimensions: 194.634 by 308.408 points 
+Resolution: 378.434 by 378.434 pixels per inch
+
+
+/Users/shebli/Desktop/JOBZ/RHH/PHYSICAL BRANDING/Posters/Lightbox Poster/RHH_Insurance_Lightbox poster/Links/NEXtCARE.webp
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 5214K, 1500 by 890 pixels
+Dimensions: 401.95 by 238.49 points 
+Resolution: 268.69 by 268.69 pixels per inch
+
+
+/Users/shebli/Desktop/JOBZ/RHH/PHYSICAL BRANDING/Posters/Lightbox Poster/RHH_Insurance_Lightbox poster/Links/unnamed.png
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 162K, 329 by 169 pixels
+Dimensions: 395.544 by 203.182 points 
+Resolution: 59.887 by 59.887 pixels per inch
+
+
+/Users/shebli/Desktop/JOBZ/RHH/PHYSICAL BRANDING/Posters/Lightbox Poster/RHH_Insurance_Lightbox poster/Links/AIC-LOGO-NEW.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 578K, 683 by 217 pixels
+Dimensions: 392.51 by 124.707 points 
+Resolution: 125.286 by 125.286 pixels per inch
+
+
+/Users/shebli/Desktop/JOBZ/RHH/PHYSICAL BRANDING/Posters/Lightbox Poster/RHH_Insurance_Lightbox poster/Links/NAS.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 206K, 307 by 172 pixels
+Dimensions: 318.35 by 178.359 points 
+Resolution: 69.433 by 69.433 pixels per inch
+
+
+/Users/shebli/Desktop/JOBZ/RHH/PHYSICAL BRANDING/Posters/Lightbox Poster/RHH_Insurance_Lightbox poster/Links/MSH_1_a21cd16df9.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2899K, 862 by 861 pixels
+Dimensions: 448.635 by 448.115 points 
+Resolution: 138.34 by 138.34 pixels per inch
+
+
+/Users/shebli/Desktop/JOBZ/RHH/PHYSICAL BRANDING/Posters/Lightbox Poster/RHH_Insurance_Lightbox poster/Links/Tricare.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 549K, 510 by 276 pixels
+Dimensions: 312.025 by 168.86 points 
+Resolution: 117.683 by 117.683 pixels per inch
